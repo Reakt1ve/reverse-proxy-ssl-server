@@ -1,0 +1,18 @@
+services:
+  reverse-proxy-apache2:
+    image: reverse-ssl:latest
+    container_name: reverse-proxy-apache2
+    hostname: msk1.soft.kz
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      LETS_ENCRYPT_EMAIL: "r3akt1vee@gmail.com"
+    volumes:
+      - reverse-ssl-ssl:/etc/letsencrypt
+      - reverse-ssl-proxy:/etc/apache2/sites-available
+    networks:
+      channel_net:
+        ipv4_address: 172.16.120.10
+      default:
