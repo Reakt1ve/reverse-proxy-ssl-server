@@ -12,9 +12,9 @@
 <p>Run as a single container</p>
 
 <pre>
-docker run -dit --rm -e LETS_ENCRYPT_MAIL="josoh89952@pashter.com" /
+docker run -dit --rm -e LETS_ENCRYPT_MAIL="examle@email.com" /
             -v $(pwd)/sites-available/:/etc/apache2/sites-available/ /
-            -v $(pwd)/letsencrypt/:/etc/letsencrypt --name test -h citis-test.zapto.org /
+            -v $(pwd)/letsencrypt/:/etc/letsencrypt --name test -h host.domain /
             -p "80:80" -p "443:443" reverse-ssl
 </pre>
 
