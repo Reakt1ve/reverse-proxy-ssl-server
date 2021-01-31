@@ -25,7 +25,7 @@ docker run -dit --rm -e LETS_ENCRYPT_MAIL="examle@email.com" /
 
 <h2>Environment</h2>
 <p>
-  In this schema <code>LETS_ENCRYPT_DOMAINS</code> is optional variable. By default algorithm get hostname binding to server.
+  In this schema <code>LETS_ENCRYPT_DOMAINS</code> is optional variable. By default algorithm get hostname binding to server (priority operation).
 </p>
 <pre>
 LETS_ENCRYPT_MAIL="examle@mail.com" - email variable as Let's Encrypt Authority registration and recovery contact 
